@@ -36,7 +36,7 @@ public class ClienteController {
 		try {
 			List<Cliente> clientes = new ArrayList<Cliente>();
 			
-			if (cedula == null) {
+			if ((cedula.toString()) == null) {
 				clienteRepository.findAll().forEach(clientes::add);
 			} else {
 				clienteRepository.findByCedulacliente(cedula).forEach(clientes::add);
